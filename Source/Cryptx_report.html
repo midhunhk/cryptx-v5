@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Project Report File</title>
+<style type="text/css">
+<!--
+body{ 
+	margin-bottom:2px;margin-left:2px;
+	margin-right:2px;margin-top:2px; 
+	background-color:#F2F2F2;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;color:#121212;
+}
+#content{ 
+	background-color:#FFFFFF; border:#00CCFF dashed 1px;margin-left:8px; margin-right:8px;
+	margin-top:5px;	margin-bottom:5px;
+	padding-left:4px; padding-right:4px;
+	text-align:justify;
+}
+#footer{
+	padding-top:2px; padding-bottom:2px; 
+	margin-left:10px; margin-right:10px;
+	background-color:#00CCFF;text-align:center;
+	color:#000066;font-size:10px;
+}
+#id1{float:left; background-color:#00CCFF;}
+#id2{float:left; background-color:#0066FF;}
+#id3{float:left; background-color:#0099FF;}
+#id4{float:left; background-color:#99CCFF;}
+h3{color:#003399;font-weight:bold; font-size:18px;}
+.smallText{font-size:10px;}
+.link a{color:#0066CC;text-decoration:underline;}
+.link a:hover{color:#0099FF;text-decoration:none;}
+-->
+</style></head><body>
+<div id='content'>
+<h3>Cryptx</h3>
+<table width=700 border=0 cellspacing=4 cellpadding=2>
+<tr><td align='right' width='300'>Project Start Date : </td>
+<td align='left' colspan=2>6/20/2008 9:36:09 AM</td></tr>
+<tr><td align='right'>Current Version : </td>
+<td align='left' colspan=2>5.1.6.0</td></tr>
+<tr><td align='right'>Project Description : </td>
+<td align='left' colspan=2>Open Source Encryption software.
+Uses AES with 128 bit key and Rich GUI</td></tr>
+<tr><td align='right'>Report Generation Date : </td>
+<td align='left' colspan=2>8/18/2008</td></tr>
+<tr><td align='right'>Username : </td>
+<td align='left' colspan=2>Midhun Harikumar</td></tr>
+<tr><td colspan=3>&nbsp</td></tr>
+<tr><td align='right'><b>Development Times</b></td>
+<td colspan=2>&nbsp;</td></tr>
+<tr><td align='right'>Project Design Time : </td>
+<td align='left'>01:12:26</td>
+<td><div id=id1 style=width:6.26838977672648px>&nbsp;</div></td></tr>
+<tr><td align='right'>Project Coding : </td>
+<td align='left'>14:46:38</td>
+<td><div id=id2 style=width:76.7293601800035px>&nbsp;</div></td></tr>
+<tr><td align='right'>Project Testing : </td>
+<td align='left'>02:38:47</td>
+<td><div id=id3 style=width:13.7411296371084px>&nbsp;</div></td></tr>
+<tr><td align='right'>Project Documentation Time : </td>
+<td align='left'>00:37:41</td>
+<td><div id=id4 style=width:3.26112040616166px></div></td></tr>
+<tr><td>&nbsp;</td><td align='left' colspan=2>------------</td></tr>
+<tr><td align='right'>Project Total Time : </td>
+<td align='left' colspan=2>19:15:32</td></tr>
+</table><br>
+<h3>Project Work History</h3>CryptX 5 - Work History<br />-----------------------<br /><br />- After preliminary analysis, choosing Borland C++ 5 compiler as it creates optimum output code. The CodeBlocks compiler outputted file at almost 5 times the size., 90 [9:38 AM 6/20/2008]<br /><br />- Setting the RAP file 5 structure as <br />--------------------------<br />RapFileIdentifier<br />OriginalExtention<br />CryptxSignature<br />PayloadLength<br />PayloadCRC32<br />Payload<br />-----------------------<br /><br />Open for revisions and may be changed through the development of the project, 91 [10:01 AM 6/20/2008]<br /><br />- Starting the coding for DiskFile Abstract class, 92 [10:09 AM 6/20/2008]<br /><br />- Creating DiskFileIn Class and DiskFileOut for implementing disk file operations., 93 [11:13 AM 6/20/2008]<br /><br />- Top down programming approach is not working  with out the basic module, we cant do any unit testing. besides the flow of the entire program cannot be followed. So switching to Bottom-Up Programming model., 94 [11:23 PM 6/20/2008]<br /><br />- We are switching to v 0.2 on basic modules., 95 [11:24 PM 6/20/2008]<br /><br />- Fixed some serious bugs in the AES Implementation that we are supposed to use. Wasted hours trying to find an alternative code, but none could be found that suit our specific needs!, 98 [11:25 PM 6/20/2008]<br /><br />- Implmenting DiskFileOut, 99 [11:37 PM 6/20/2008]<br /><br />- implemented the basic concepts for all classes except the logger., 100 [11:33 AM 6/21/2008]<br /><br />- and first bug has appeared in the readBlock() methods of DiskFileIn Class. The new line combination is not processed correctly..., 101 [11:36 AM 6/21/2008]<br /><br />- T Time - Testing if the encryption works, if it doesnt, we may have to scrap the entire project ...., 102 [11:47 AM 6/21/2008]<br /><br />- seems to be working ...., 103 [11:48 AM 6/21/2008]<br /><br />- First major bug .. when writing to the outpout file, nothing is written ..., 104 [12:04 PM 6/21/2008]<br /><br />- The AES method that we were about to implement seems not to be decrypting properly .. so shifting to Rijandel implementation, which could be slower., 105 [8:02 AM 6/23/2008]<br /><br />- A whole lot of bugs seem to be popping up now..., 106 [8:17 AM 6/23/2008]<br /><br />- Some bugs fixed, now the problem is that some discrepancy in the decrypted file.. Decryption is happening anyhow, 400 [8:26 AM 6/23/2008]<br /><br />- There seems to be some problem in the size of the decrypted strings, 401 [8:36 AM 6/23/2008]<br /><br />- We had taken the output file size as the size of the Rap file instead of reading it from the header. that was a mistake., 402 [8:39 AM 6/23/2008]<br /><br />- Testing, the file sizes match, but there is a string that is causing problems in the decrypted file., 403 [8:40 AM 6/23/2008]<br /><br />- Some error in the decryption of the last block, it seems. Maybe because of the extra padding that we applied in the encryption step., 404 [9:57 AM 6/23/2008]<br /><br />- Moving onto version 0.5, 500 [2:20 PM 6/23/2008]<br /><br />- The decrypted block of data seem to be varying with the original data., 501 [2:25 PM 6/23/2008]<br /><br />- The problem occurs if  block size is not a multiple of 16., 502 [2:32 PM 6/23/2008]<br /><br />- Finally able to get the last block decrypted properly. The bug was in reading the wrong amount of bytes from the last block of the Encrypted File., 503 [3:35 PM 6/23/2008]<br /><br />- Big time error for a binary file...., 504 [3:38 PM 6/23/2008]<br /><br />- Works properly for samll sized text files., 505 [3:42 PM 6/23/2008]<br /><br />- The program seems to be working fine, but some minor bug exists somewhere., 506 [3:55 PM 6/23/2008]<br /><br />- There seem to be no problems with the decryption of the source file size is a multiple of 16 bytes., 507 [9:58 AM 6/24/2008]<br /><br />- Some form of strings cause the encryption of a block to return less than 16 bytes of data, which is causing major problems while decrypting it. These setrings dont seem to have a quickly identifiable patern and is most prominent in long or binary files., 508 [6:42 PM 6/25/2008]<br /><br />- There can be no prediction on the type of strings that can cause this sort of error in the program. It appears to be random and more so in large sized input., 509 [6:49 PM 6/25/2008]<br /><br />- We will surely need to change the Algorithm used - Rijandel AES as it is found to be highly undependable as encrypted strings are apparantly unpredictable as different outputs are obtained for the same string at different times. <br />So a change in algorithm or the project will be scrapped., 510 [7:10 PM 6/25/2008]<br /><br />- Days and weeks of coding and recoding has happened over the past few weeks and have not been documented because this project was on the verge of being scrapped. There was serious problem with the AES implementation which was generating blocks of size less than 16bytes  on some blocks of inputs . It had to work properly but we could not find the reason for this anomaly. it seemd to be  more persistent on binary files, lengthy text files and files with sizes not multiples of 16., 511 [10:42 AM 7/20/2008]<br /><br />- The anomolous blocks if they are depeneded on some the string patterns, we could do some simple shifting on them and do encryption again., 550 [10:46 AM 7/20/2008]<br /><br />- Trying different types of functions to pack the anomolous blocks. testing with text files so that the output can be compared with the input easily,, 551 [10:48 AM 7/20/2008]<br /><br />- trying ~ (invererter) - not working, 552 [10:49 AM 7/20/2008]<br /><br />- trying ^ (XOR) with 2,4,16,32 and now with 128, 553 [10:49 AM 7/20/2008]<br /><br />- New class called Block is created which represents an encrypted block in CryptX 5, 560 [10:50 AM 7/20/2008]<br /><br />- Formats of Block revised, 561 [10:50 AM 7/20/2008]<br /><br />- DiskFileIn & DiskFileOut have methods that work with the Block, 562 [10:51 AM 7/20/2008]<br /><br />- Variable state in Block denotes of the data is packed or not., 570 [10:51 AM 7/20/2008]<br /><br />- All works result in same unreliablility with the working., 571 [10:52 AM 7/20/2008]<br /><br />- took four weeks of vacation from project in the middle of this and concentrate on mentally working out steps and procedures that could solve or ateast discover the problem., 572 [10:53 AM 7/20/2008]<br /><br />- Now we are converting the encrypted block into equivalent hex code and storing the hex code in the RAP File. The problem could be some control; characters that would undergo conversions when associtaed with a file. But a 16byte input block's equivalent is a 32yte hex string. So the RAP file is more than twice the size of the input file which is not pretty good. We can only say that the security provided is almost unbreakable., 573 [11:05 AM 7/20/2008]<br /><br />- Code clean up. a lot of redundant code has been removed. The last block is also processed in the main loop for both encryption & decryption., 574 [11:07 AM 7/20/2008]<br /><br />- DiskFileOut returns the CRC of output file, 575 [12:46 PM 7/20/2008]<br /><br />- Major bug fix as encryption did not check for the status of the file whether it is opened or not., 576 [12:52 PM 7/20/2008]<br /><br />- The application signature hash is also converted to hex, 16 bytes. so we can save some size in the header., 577 [1:05 PM 7/20/2008]<br /><br />- Header size reduced from 76 bytes to 42 bytes, 578 [1:09 PM 7/20/2008]<br /><br />- trying to display the progress of encryption in the commandline interface itself., 579 [1:19 PM 7/20/2008]<br /><br />- Still problems with the binary file formats., 580 [1:21 PM 7/20/2008]<br /><br />- The problem with binary files is finally understood. The conversion to HEX is incorrect for binary files. So wrong information is stored and decrypted., 581 [9:24 PM 7/23/2008]<br /><br />- Some amount of code reorganisation and the program works...??, 582 [11:07 AM 7/25/2008]<br /><br />- Starting some simple testing of the program., 583 [11:31 AM 7/25/2008]<br /><br />- Proper Version change as the project seems to be going in the right direction., 5132 [12:33 PM 7/25/2008]<br /><br />- removed the 'altered' byte from Block, 5133 [12:35 PM 7/25/2008]<br /><br />- revised command line param counts of main appEntry Point, 5134 [12:37 PM 7/25/2008]<br /><br />- Doing class definitions for the CTimer class, 5135 [12:56 PM 7/25/2008]<br /><br />- CTimer class implemented & tested sucessfully CTimer - 0.4 some minor internal changes., 5136 [1:57 PM 7/25/2008]<br /><br />- debugging CTimer class, 5137 [2:24 PM 7/25/2008]<br /><br />- command line params change. added debugging option and custom logfile name., 5138 [2:40 PM 7/25/2008]<br /><br />- Starting with the design of the HTA Interface., 5139 [6:25 PM 7/25/2008]<br /><br />- Sticking to the old color schems and icons and logos., 5140 [6:26 PM 7/25/2008]<br /><br />- Finished with the layout and setting up of the basic HTA interface., 5141 [6:56 PM 7/25/2008]<br /><br />- Starting on js code for adding functionality to the GUI. Firstly "CommandLineGen.js" to process Command Line Paramers, 5142 [9:08 PM 7/26/2008]<br /><br />- Basic coding for generating the command line params done. now the code to work with custom folder or file name option have to be done in this file., 5143 [9:38 PM 7/26/2008]<br /><br />- Added code that creates correct output file name and path depending on state of checkboxes., 5144 [10:09 PM 7/26/2008]<br /><br />- Completed script for updating state of Optional Custom input from user in GUI., 5149 [10:51 PM 7/26/2008]<br /><br />- Successfully tested integration of the GUI with the command line executable and test is successful., 5150 [10:54 PM 7/26/2008]<br /><br />- Next to implement is the revolutionary never before tried code of communication from commandline executable to upper level GUI component for real time update., 5151 [11:19 PM 7/26/2008]<br /><br />- Executable writes to the status file if the source file is not found or not opened., 5152 [11:32 PM 7/26/2008]<br /><br />- Reconfigured the code names for messages written to the status file., 5153 [11:33 PM 7/26/2008]<br /><br />- added code for verifying the CRC32 of the decrypted file with that in the payload., 5154 [11:42 PM 7/26/2008]<br /><br />- Starting on the code for the status listner on the HTA interface to enabe reverse communication., 5155 [10:34 AM 7/27/2008]<br /><br />- Starting testing of statusListner with the command line application., 5156 [10:52 AM 7/27/2008]<br /><br />- Code cleanup of GUI scripts., 5157 [11:06 AM 7/27/2008]<br /><br />- Web 2.0 look for GUI in fw., 5158 [8:29 PM 7/27/2008]<br /><br />- minor tweaks in GUI, 5159 [9:20 AM 7/28/2008]<br /><br />- Scrapped the scripts for checking if the custom file name ends with spaces, 5160 [9:33 AM 7/28/2008]<br /><br />- we got web presence for this project now [http://www.cryptx5.co.nr/], redirects to blog with label cryptx, 5161 [11:07 AM 7/29/2008]<br />
+    <p class="smallText">This file has been autogenerated by Project Manager, Software Project Management Tool.<br />
+        <span class="link"><a href="http://www.midhunhk.blogspot.com/">http://www.midhunhk.blogspot.com/</a></span>
+    </p>
+  </div>
+  <div id="footer">&copy; 2008 Centrum inc Software Solutions</div>
+</body>
+</html>
+
