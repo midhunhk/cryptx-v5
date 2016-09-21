@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+ <hta:application
+     id="cryptx"
+     applicationname="Cryptx 5"
+     border="dialog"
+     contextmenu="no"
+     icon="data\cryptx_icon.ico"
+     innerborder="no"
+     maximizebutton="no"
+     scroll="no"
+     selection="no"
+     version="5.2"
+ >
+<title>Cryptx 5 - 32-bit Encryption Utility</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="data/iface/sideliner2.css" type="text/css" rel="stylesheet" />
+<script language="javascript1.2" src="data/scripts/CommonMethods0.js"></script>
+<script language="javascript1.2" src="data/scripts/CommandLineGen.js"></script>
+<script language="javascript1.2" src="data/scripts/DataValidators.js"></script>
+<script language="javascript1.2" src="data/scripts/StatusListener.js"></script>
+<script language="javascript1.2" src="data/scripts/StyleSetters00.js"></script>
+</head>
+<body>
+
+<div id="sl-outerWrapper">
+ <table border="0" cellpadding="0" cellspacing="0" width="380">  
+  <tr>
+    <td rowspan="2">
+  	<img name="sl_header" src="data/iface/sl_header.png" width="294" height="136" border="0" id="sl_header" alt="Cryptx" /></td>
+     <td>
+	 <a href="javascript:void(0);" onclick="return false;">
+	 <img name="btn_help" src="data/iface/btn_help.png" width="43" height="44" border="0" id="btn_help" alt="Help" /></a></td>
+     <td>
+	 <a href="javascript:void(0);" onclick="showAboutWindow(); return false;">
+	 <img name="btn_about" src="data/iface/btn_about.png" width="43" height="44" border="0" id="btn_about" alt="About" /></a></td>
+     <td><img src="data/iface/spacer.gif" width="1" height="44" border="0" alt="" /></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+	  	<img name="sl_header2" src="data/iface/sl_header2.png" width="86" height="92" border="0" id="sl_header2" alt="" /></td>
+     <td><img src="data/iface/spacer.gif" width="1" height="92" border="0" alt="" /></td>
+    </tr>
+ </table>
+
+  <div id="sl-mainContent">
+    <form id="frm_main" name="form1" method="post" action="">
+	  <div id="frm_upperPart">
+	  <label>Select File :
+	  <input type="file" name="txtFile" value="Choose" /></label><br />
+      <label>Password : <input name="txtPassword" type="password" id="txtPassword" />
+      </label>&nbsp;
+	<span id="cmdRun">
+	  <input type="submit" name="btnSubmit" value="Convert" onclick="return false;" />
+	</span>
+	  </div>
+	  <div id="frm_lowerPart">
+	    <br /><br />
+	    <p>Specify a custom output file name or filepath.</p>
+	    <label>
+	    <input name="chkCustomDir" type="checkbox" id="chkCustomDir" value="checkbox"
+		   onclick="setTextboxStyle('txtCustomDir',this.checked);" />
+	    Output Dir : </label>
+	    <input name="txtCustomDir" type="text" id="txtCustomDir" class="optionalTBDefaultStyle" disabled="true" />
+	    <br /><br />
+	    <label>
+	    <input name="chkCustomFile" type="checkbox" id="chkCustomFile" value="checkbox"
+		   onclick="setTextboxStyle('txtCustomFile',this.checked);" />
+	    File Name&nbsp;&nbsp;: </label>
+	    <input name="txtCustomFile" type="text" id="txtCustomFile" class="optionalTBDefaultStyle" disabled="true"/>
+	  </div>
+    </form>
+  </div>
+</div>
+
+<SCRIPT FOR="cmdRun" EVENT="onclick" LANGUAGE="VBScript">
+	Dim objShell
+	Dim name
+	name = getCommandLineParams()
+	on error resume next
+	set objShell = CreateObject( "WScript.Shell" )
+	objShell.Run name, 4, 0
+	set objShell = Nothing
+</SCRIPT>
+</body>
+</html>

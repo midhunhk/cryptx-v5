@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<project-info>
+	<name>CryptX</name>
+	<version>5.0</version>
+	<revision>1.6.2</revision>
+	<codename>SideLiner</codename>
+	<isBeta>yes</isBeta>
+	<date>August 2008</date>
+	<type>Application</type>
+	<language>English</language>
+	<website>http://www.cryptx5.co.nr/</website>
+	<media>Compressed Distribution</media>
+	<author>Centrum inc Software Solutions</author>
+</project-info>

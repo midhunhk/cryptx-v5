@@ -1,0 +1,174 @@
+CryptX 5 - Work History
+-----------------------
+
+- After preliminary analysis, choosing Borland C++ 5 compiler as it creates optimum output code. The CodeBlocks compiler outputted file at almost 5 times the size., 90 [9:38 AM 6/20/2008]
+
+- Setting the RAP file 5 structure as 
+--------------------------
+RapFileIdentifier
+OriginalExtention
+CryptxSignature
+PayloadLength
+PayloadCRC32
+Payload
+-----------------------
+
+Open for revisions and may be changed through the development of the project, 91 [10:01 AM 6/20/2008]
+
+- Starting the coding for DiskFile Abstract class, 92 [10:09 AM 6/20/2008]
+
+- Creating DiskFileIn Class and DiskFileOut for implementing disk file operations., 93 [11:13 AM 6/20/2008]
+
+- Top down programming approach is not working  with out the basic module, we cant do any unit testing. besides the flow of the entire program cannot be followed. So switching to Bottom-Up Programming model., 94 [11:23 PM 6/20/2008]
+
+- We are switching to v 0.2 on basic modules., 95 [11:24 PM 6/20/2008]
+
+- Fixed some serious bugs in the AES Implementation that we are supposed to use. Wasted hours trying to find an alternative code, but none could be found that suit our specific needs!, 98 [11:25 PM 6/20/2008]
+
+- Implmenting DiskFileOut, 99 [11:37 PM 6/20/2008]
+
+- implemented the basic concepts for all classes except the logger., 100 [11:33 AM 6/21/2008]
+
+- and first bug has appeared in the readBlock() methods of DiskFileIn Class. The new line combination is not processed correctly..., 101 [11:36 AM 6/21/2008]
+
+- T Time - Testing if the encryption works, if it doesnt, we may have to scrap the entire project ...., 102 [11:47 AM 6/21/2008]
+
+- seems to be working ...., 103 [11:48 AM 6/21/2008]
+
+- First major bug .. when writing to the outpout file, nothing is written ..., 104 [12:04 PM 6/21/2008]
+
+- The AES method that we were about to implement seems not to be decrypting properly .. so shifting to Rijandel implementation, which could be slower., 105 [8:02 AM 6/23/2008]
+
+- A whole lot of bugs seem to be popping up now..., 106 [8:17 AM 6/23/2008]
+
+- Some bugs fixed, now the problem is that some discrepancy in the decrypted file.. Decryption is happening anyhow, 400 [8:26 AM 6/23/2008]
+
+- There seems to be some problem in the size of the decrypted strings, 401 [8:36 AM 6/23/2008]
+
+- We had taken the output file size as the size of the Rap file instead of reading it from the header. that was a mistake., 402 [8:39 AM 6/23/2008]
+
+- Testing, the file sizes match, but there is a string that is causing problems in the decrypted file., 403 [8:40 AM 6/23/2008]
+
+- Some error in the decryption of the last block, it seems. Maybe because of the extra padding that we applied in the encryption step., 404 [9:57 AM 6/23/2008]
+
+- Moving onto version 0.5, 500 [2:20 PM 6/23/2008]
+
+- The decrypted block of data seem to be varying with the original data., 501 [2:25 PM 6/23/2008]
+
+- The problem occurs if  block size is not a multiple of 16., 502 [2:32 PM 6/23/2008]
+
+- Finally able to get the last block decrypted properly. The bug was in reading the wrong amount of bytes from the last block of the Encrypted File., 503 [3:35 PM 6/23/2008]
+
+- Big time error for a binary file...., 504 [3:38 PM 6/23/2008]
+
+- Works properly for samll sized text files., 505 [3:42 PM 6/23/2008]
+
+- The program seems to be working fine, but some minor bug exists somewhere., 506 [3:55 PM 6/23/2008]
+
+- There seem to be no problems with the decryption of the source file size is a multiple of 16 bytes., 507 [9:58 AM 6/24/2008]
+
+- Some form of strings cause the encryption of a block to return less than 16 bytes of data, which is causing major problems while decrypting it. These setrings dont seem to have a quickly identifiable patern and is most prominent in long or binary files., 508 [6:42 PM 6/25/2008]
+
+- There can be no prediction on the type of strings that can cause this sort of error in the program. It appears to be random and more so in large sized input., 509 [6:49 PM 6/25/2008]
+
+- We will surely need to change the Algorithm used - Rijandel AES as it is found to be highly undependable as encrypted strings are apparantly unpredictable as different outputs are obtained for the same string at different times. 
+So a change in algorithm or the project will be scrapped., 510 [7:10 PM 6/25/2008]
+
+- Days and weeks of coding and recoding has happened over the past few weeks and have not been documented because this project was on the verge of being scrapped. There was serious problem with the AES implementation which was generating blocks of size less than 16bytes  on some blocks of inputs . It had to work properly but we could not find the reason for this anomaly. it seemd to be  more persistent on binary files, lengthy text files and files with sizes not multiples of 16., 511 [10:42 AM 7/20/2008]
+
+- The anomolous blocks if they are depeneded on some the string patterns, we could do some simple shifting on them and do encryption again., 550 [10:46 AM 7/20/2008]
+
+- Trying different types of functions to pack the anomolous blocks. testing with text files so that the output can be compared with the input easily,, 551 [10:48 AM 7/20/2008]
+
+- trying ~ (invererter) - not working, 552 [10:49 AM 7/20/2008]
+
+- trying ^ (XOR) with 2,4,16,32 and now with 128, 553 [10:49 AM 7/20/2008]
+
+- New class called Block is created which represents an encrypted block in CryptX 5, 560 [10:50 AM 7/20/2008]
+
+- Formats of Block revised, 561 [10:50 AM 7/20/2008]
+
+- DiskFileIn & DiskFileOut have methods that work with the Block, 562 [10:51 AM 7/20/2008]
+
+- Variable state in Block denotes of the data is packed or not., 570 [10:51 AM 7/20/2008]
+
+- All works result in same unreliablility with the working., 571 [10:52 AM 7/20/2008]
+
+- took four weeks of vacation from project in the middle of this and concentrate on mentally working out steps and procedures that could solve or ateast discover the problem., 572 [10:53 AM 7/20/2008]
+
+- Now we are converting the encrypted block into equivalent hex code and storing the hex code in the RAP File. The problem could be some control; characters that would undergo conversions when associtaed with a file. But a 16byte input block's equivalent is a 32yte hex string. So the RAP file is more than twice the size of the input file which is not pretty good. We can only say that the security provided is almost unbreakable., 573 [11:05 AM 7/20/2008]
+
+- Code clean up. a lot of redundant code has been removed. The last block is also processed in the main loop for both encryption & decryption., 574 [11:07 AM 7/20/2008]
+
+- DiskFileOut returns the CRC of output file, 575 [12:46 PM 7/20/2008]
+
+- Major bug fix as encryption did not check for the status of the file whether it is opened or not., 576 [12:52 PM 7/20/2008]
+
+- The application signature hash is also converted to hex, 16 bytes. so we can save some size in the header., 577 [1:05 PM 7/20/2008]
+
+- Header size reduced from 76 bytes to 42 bytes, 578 [1:09 PM 7/20/2008]
+
+- trying to display the progress of encryption in the commandline interface itself., 579 [1:19 PM 7/20/2008]
+
+- Still problems with the binary file formats., 580 [1:21 PM 7/20/2008]
+
+- The problem with binary files is finally understood. The conversion to HEX is incorrect for binary files. So wrong information is stored and decrypted., 581 [9:24 PM 7/23/2008]
+
+- Some amount of code reorganisation and the program works...??, 582 [11:07 AM 7/25/2008]
+
+- Starting some simple testing of the program., 583 [11:31 AM 7/25/2008]
+
+- Proper Version change as the project seems to be going in the right direction., 5132 [12:33 PM 7/25/2008]
+
+- removed the 'altered' byte from Block, 5133 [12:35 PM 7/25/2008]
+
+- revised command line param counts of main appEntry Point, 5134 [12:37 PM 7/25/2008]
+
+- Doing class definitions for the CTimer class, 5135 [12:56 PM 7/25/2008]
+
+- CTimer class implemented & tested sucessfully CTimer - 0.4 some minor internal changes., 5136 [1:57 PM 7/25/2008]
+
+- debugging CTimer class, 5137 [2:24 PM 7/25/2008]
+
+- command line params change. added debugging option and custom logfile name., 5138 [2:40 PM 7/25/2008]
+
+- Starting with the design of the HTA Interface., 5139 [6:25 PM 7/25/2008]
+
+- Sticking to the old color schems and icons and logos., 5140 [6:26 PM 7/25/2008]
+
+- Finished with the layout and setting up of the basic HTA interface., 5141 [6:56 PM 7/25/2008]
+
+- Starting on js code for adding functionality to the GUI. Firstly "CommandLineGen.js" to process Command Line Paramers, 5142 [9:08 PM 7/26/2008]
+
+- Basic coding for generating the command line params done. now the code to work with custom folder or file name option have to be done in this file., 5143 [9:38 PM 7/26/2008]
+
+- Added code that creates correct output file name and path depending on state of checkboxes., 5144 [10:09 PM 7/26/2008]
+
+- Completed script for updating state of Optional Custom input from user in GUI., 5149 [10:51 PM 7/26/2008]
+
+- Successfully tested integration of the GUI with the command line executable and test is successful., 5150 [10:54 PM 7/26/2008]
+
+- Next to implement is the revolutionary never before tried code of communication from commandline executable to upper level GUI component for real time update., 5151 [11:19 PM 7/26/2008]
+
+- Executable writes to the status file if the source file is not found or not opened., 5152 [11:32 PM 7/26/2008]
+
+- Reconfigured the code names for messages written to the status file., 5153 [11:33 PM 7/26/2008]
+
+- added code for verifying the CRC32 of the decrypted file with that in the payload., 5154 [11:42 PM 7/26/2008]
+
+- Starting on the code for the status listner on the HTA interface to enabe reverse communication., 5155 [10:34 AM 7/27/2008]
+
+- Starting testing of statusListner with the command line application., 5156 [10:52 AM 7/27/2008]
+
+- Code cleanup of GUI scripts, 5157 [11:06 AM 7/27/2008]
+
+- Web 2.0 look for GUI in fw, 5158 [8:29 PM 7/27/2008]
+
+- minor tweaks in GUI, 5159 [9:20 AM 7/28/2008]
+
+- Scrapped the scripts for checking if the custom file name ends with spaces, 5160 [9:33 AM 7/28/2008]
+
+- we got web presence for this project now [http://www.cryptx5.co.nr/], redirects to blog with label cryptx, 5161 [11:07 AM 7/29/2008]
+
+- Removed the processing completenes % for encryption steps. The displaying of text in console and removing it seems to slow down the process loop by some amount. , 5163 [7:51 AM 9/7/2008]
+

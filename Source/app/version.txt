@@ -1,0 +1,12 @@
+Cryptx
+
+[Version]
+5.1.6.4
+
+[Date]
+September 2008
+
+[Website]
+http://www.cryptx5.co.nr/
+
+(c) Centrum inc Software Solutions R & D
