@@ -1,5 +1,5 @@
 # cryptx-v5
-An Encryption/Decryption app in C++
+An Encryption/Decryption app written in C++, with an HTA UI
 
-This is the code backup for Cryptx Version 5.
+This repository hosts the code for Cryptx Version 5. [Beta Release Blog Post](http://midhunhk.blogspot.com/2008/07/cryptx-5-beta-1-release.html)
 The latest Cryptx (Version 6) source code is hosted at: https://github.com/midhunhk/cryptx
